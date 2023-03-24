@@ -22,7 +22,6 @@ class VentanaPrincipal(QMainWindow):
     def evento_click(self):
         print('Has hecho click...')
 
-
 if __name__ == '__main__':
     # Creamos la aplicación
     app = QApplication([])
