@@ -1,26 +1,17 @@
+from PySide6.QtGui import QPixmap
 from PySide6.QtWidgets import QMainWindow, QLabel, QApplication
-from PySide6.QtCore import Qt
 
 
 class Componentes(QMainWindow):
     def __init__(self) -> None:
         super().__init__()
         self.setWindowTitle("Componentes")
+        self.setFixedSize(500, 600)
 
         # Creamos la etiqueta
         etiqueta = QLabel("Hola")
-
-        # Modificamos el valor inicial
-        etiqueta.setText("Saludos")
-
-        # Modificar la fuente
-        fuente = etiqueta.font()
-        fuente.setPointSize(25)  # Valor default = 12
-        etiqueta.setFont(fuente)
-
-        # Modificar la alineacion de la etiqueta
-        # etiqueta.setAlignment(Qt.AlignCenter)
-        etiqueta.setAlignment(Qt.AlignHCenter | Qt.AlignVCenter)
+        etiqueta.setPixmap(QPixmap("layla.jpg"))
+        etiqueta.setScaledContents(True)
 
         # Publicamos el componente
         self.setCentralWidget(etiqueta)
