@@ -20,12 +20,15 @@ class VentanaPrincipal(QMainWindow):
         # Publicamos el botón
         self.setCentralWidget(boton)
 
-    def evento_checar(self, checar):
+    @staticmethod
+    def evento_checar(checar):
         print('Checado?', checar)
 
     # Creamos el método (slot) que procesa o consume el evento (signal)
-    def evento_click(self):
+    @staticmethod
+    def evento_click():
         print('Has hecho click')
+
 
 if __name__ == '__main__':
     # Creamos el objeto aplicación
