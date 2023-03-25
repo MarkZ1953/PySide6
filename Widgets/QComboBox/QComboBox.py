@@ -1,4 +1,4 @@
-from PySide6.QtWidgets import QMainWindow, QApplication, QComboBox, QCompleter
+from PySide6.QtWidgets import QMainWindow, QApplication, QComboBox
 
 
 class Componentes(QMainWindow):
@@ -31,8 +31,20 @@ class Componentes(QMainWindow):
         # Modifica el elemento actual
         # combobox.setInsertPolicy(QComboBox.InsertAtCurrent)
 
-        #Insertar al final
-        combobox.setInsertPolicy(QComboBox.InsertAtBottom)
+        # Insertar al final
+        # combobox.setInsertPolicy(QComboBox.InsertAtBottom)
+
+        # Insertar antes del elemento actual
+        # combobox.InsertPolicy(QComboBox.InsertBeforeCurrent)
+
+        # Insertar despues del elemento actual
+        # combobox.setInsertPolicy(QComboBox.InsertAfterCurrent)
+
+        # Insertar alfabeticamente
+        # combobox.setInsertPolicy(QComboBox.InsertAlphabetically)
+
+        # Limitar cuantos elementos se agregan al combobox
+        combobox.setMaxCount(6)
 
         # Publicamos este componente
         self.setCentralWidget(combobox)
