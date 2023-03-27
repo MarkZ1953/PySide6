@@ -22,34 +22,26 @@ class Componentes(QMainWindow):
     def mostrar_estado(self, estado):
         print(f"Estado : {estado}")
 
-        """
-        #############################
-        Trabajamos con las constantes
-        #############################
-        
-        if estado == Qt.Checked:
+        # Trabajamos con las constantes
+
+        if estado == Qt.CheckState.Checked:
             print("CheckBox encendido")
-        elif estado == Qt.PartiallyChecked:
+        elif estado == Qt.CheckState.PartiallyChecked:
             print("CheckBox sin estado o parcialmente checado")
-        elif estado == Qt.Unchecked:
+        elif estado == Qt.CheckState.Unchecked:
             print("CheckBox apagado")
         else:
             print("Estado Invalido")
-            
-        ###########################################################################
-        En la version actual de PySide6 NO se pueden manejar los estados de checado
-        usando las constantes. (6.4.1)
-        ###########################################################################
-        """
 
-        if estado == 0:
-            print("CheckBox Apagado")
-        elif estado == 1:
-            print("Sin estado o parcialmente checado")
-        elif estado == 2:
-            print("CheckBox Encendido")
-        else:
-            print("Estado Invalido")
+
+        # if estado == 0:
+        #     print("CheckBox Apagado")
+        # elif estado == 1:
+        #     print("Sin estado o parcialmente checado")
+        # elif estado == 2:
+        #     print("CheckBox Encendido")
+        # else:
+        #     print("Estado Invalido")
 
 
 if __name__ == '__main__':

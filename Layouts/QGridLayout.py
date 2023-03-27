@@ -1,5 +1,5 @@
 from PySide6.QtGui import QColor, QPalette
-from PySide6.QtWidgets import QWidget, QMainWindow, QApplication, QVBoxLayout, QHBoxLayout, QGridLayout
+from PySide6.QtWidgets import QWidget, QMainWindow, QApplication, QGridLayout
 
 
 class Color(QWidget):

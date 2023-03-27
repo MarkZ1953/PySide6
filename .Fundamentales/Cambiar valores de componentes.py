@@ -23,6 +23,7 @@ class VentanaPrincipal(QMainWindow):
         self.setWindowTitle('Nuevo título de la Aplicación')
         print('evento_click')
 
+
 if __name__ == '__main__':
     # Creamos el objeto aplicación
     app = QApplication([])
