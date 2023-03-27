@@ -73,12 +73,16 @@ class Calculadora(QMainWindow):
             self.botones[texto_boton].pressed.connect(lambda k=texto_boton: self.boton_pulsado(k))
 
             if texto_boton == "C":
+                self.botones[texto_boton].setShortcut(Qt.Key.Key_Delete)
                 self.grid_layout.addWidget(self.botones[texto_boton], posicion[0], posicion[1], 1, 2)
             elif texto_boton == "\u232B":
                 self.botones[texto_boton].setShortcut(Qt.Key.Key_Backspace)
                 self.grid_layout.addWidget(self.botones[texto_boton], posicion[0], posicion[1])
             elif texto_boton == "0":
                 self.grid_layout.addWidget(self.botones[texto_boton], posicion[0], posicion[1], 1, 2)
+            elif texto_boton == "=":
+                self.botones[texto_boton].setShortcut(Qt.Key.Key_Return)
+                self.grid_layout.addWidget(self.botones[texto_boton], posicion[0], posicion[1])
             else:
                 self.grid_layout.addWidget(self.botones[texto_boton], posicion[0], posicion[1])
 
