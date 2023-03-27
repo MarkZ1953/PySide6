@@ -1,5 +1,4 @@
-from PySide6.QtCore import Qt, QLocale
-from PySide6.QtGui import QDoubleValidator
+from PySide6.QtCore import Qt
 from PySide6.QtWidgets import QMainWindow, QGridLayout, QPushButton, QWidget, QApplication, QVBoxLayout, QLineEdit
 
 
@@ -42,9 +41,8 @@ class Calculadora(QMainWindow):
         self.entrada_texto.setReadOnly(True)
         self.entrada_texto.setFixedHeight(35)
         self.entrada_texto.setAlignment(Qt.AlignmentFlag.AlignRight)
+        self.entrada_texto.clearFocus()
 
-    def verificar(self):
-        print("Hola")
 
     def crear_botones(self):
         # Creamos el grid layout donde estan estaran los botones
@@ -82,7 +80,10 @@ class Calculadora(QMainWindow):
             else:
                 self.grid_layout.addWidget(self.botones[texto_boton], posicion[0], posicion[1])
 
+
     def keyPressEvent(self, event) -> None:
+
+        print(f"Se presiono la Key : {event.key()}")
 
         permitidos = [Qt.Key.Key_1,
                       Qt.Key.Key_2,
@@ -113,8 +114,6 @@ class Calculadora(QMainWindow):
                 self.entrada_texto.insert(str(event.text()))
             else:
                 self.entrada_texto.insert(str(event.text()))
-        else:
-            event.ignore()
 
     def boton_pulsado(self, texto_boton):
 
