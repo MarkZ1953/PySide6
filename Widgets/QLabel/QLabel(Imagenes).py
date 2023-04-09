@@ -9,7 +9,7 @@ class Componentes(QMainWindow):
         self.setFixedSize(500, 600)
 
         # Creamos la etiqueta
-        etiqueta = QLabel("Hola")
+        etiqueta = QLabel()
         etiqueta.setPixmap(QPixmap("layla.jpg"))
         etiqueta.setScaledContents(True)
 
