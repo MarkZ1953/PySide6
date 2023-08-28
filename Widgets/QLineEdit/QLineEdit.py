@@ -19,7 +19,7 @@ class Componentes(QMainWindow):
         # linea_texto.setReadOnly(True)
 
         # Validacion (mask)
-        # linea_texto.setInputMask("00-0000-0000")
+        linea_texto.setInputMask("00-0000-0000")
 
         # Evento enter, cambio de seleccion de texto, cambio de texto
         linea_texto.returnPressed.connect(self.enter_presionado)
@@ -39,7 +39,7 @@ class Componentes(QMainWindow):
 
     def cambio_texto(self, nuevo_texto):
         print("Cambio de texto")
-        print(nuevo_texto)
+        print(self.centralWidget().cleanText())
 
 
 if __name__ == "__main__":
